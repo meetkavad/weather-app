@@ -1,0 +1,112 @@
+/*navbar*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:weight@100;200;300;400;500;600;700;800&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+  background: url("weather/Los Angeles.jpg") no-repeat fixed;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.search {
+  position: relative;
+  margin-top: 50px;
+  box-shadow: 0 0 40px rgba(5, 5, 5, 0.1);
+}
+
+.search input {
+  height: 60px;
+  text-indent: 25px;
+  border: 2px solid #d6d4d4;
+}
+
+.search input:focus {
+  box-shadow: none;
+  border: 2px solid blue;
+}
+
+.search button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: 50px;
+  width: 110px;
+  background: blue;
+  padding: -10px;
+}
+
+/*cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 50px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  background-color: rgb(150, 155, 255);
+  margin: auto;
+  text-align: center;
+}
+@media screen and (max-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.city-card {
+  background-color: #e0f1e0;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.city-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.city-card p {
+  margin: 10px 0;
+}
+
+.city-card button {
+  padding: 10px 20px;
+  background: transparent;
+  border: 2px solid black;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 2px solid black;
+}
+.city-card button:hover {
+  transition: 0.3s ease;
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.city-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* image animation */
+
+.img-container {
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+/*appearing cards */
